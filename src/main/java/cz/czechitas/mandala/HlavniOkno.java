@@ -41,12 +41,14 @@ public class HlavniOkno extends JFrame {
 
     public HlavniOkno() {
         initComponents();
+        File soubor = new File("Mandala1.png");
+        nahrajObrazek(soubor);
     }
 
     private void nahrajObrazek(File soubor) {
         if (soubor == null) {
             try {
-                obrazek = ImageIO.read(getClass().getResourceAsStream("/cz/czechitas/mandala/mandala.png"));
+                obrazek = ImageIO.read(getClass().getResourceAsStream("/cz/czechitas/mandala/Mandala1.png"));
             } catch (IOException ex) {
                 throw new ApplicationPublicException(ex, "Nepodařilo se nahrát zabudovaný obrázek mandaly");
             }
