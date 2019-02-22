@@ -41,8 +41,9 @@ public class HlavniOkno extends JFrame {
 
     public HlavniOkno() {
         initComponents();
-        File soubor = new File("Mandala1.png");
-        nahrajObrazek(soubor);
+        nahrajObrazek(null);
+        pack();
+        setLocationRelativeTo(null);
     }
 
     private void nahrajObrazek(File soubor) {
